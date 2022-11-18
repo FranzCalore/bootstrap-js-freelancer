@@ -51,10 +51,11 @@ function applicaSconto(prezzoBase, codiceInserito){
             codiceSconto.splice(indiceSconto,1)
             return prezzoScontato = prezzoBase*0.75
         }
-        document.getElementById("inputDiscount").classList.add("text-danger")
-        alert("CODICE SCONTO ERRATO O SCADUTO");
-        return prezzoBase
+        
     }
+    document.getElementById("inputDiscount").classList.add("text-danger")
+    alert("CODICE SCONTO ERRATO O SCADUTO");
+    return prezzoBase
 }
 
 function calcoloPrezzo (){
