@@ -44,6 +44,7 @@ function submitForm(event){
 
 
 function applicaSconto(prezzoBase, codiceInserito){
+if (document.getElementById("inputDiscount").value!=""){
     for (sconto of codiceSconto){
         if (sconto == codiceInserito){
             document.getElementById("inputDiscount").classList.remove("text-danger")
@@ -54,7 +55,7 @@ function applicaSconto(prezzoBase, codiceInserito){
         
     }
     document.getElementById("inputDiscount").classList.add("text-danger")
-    alert("CODICE SCONTO ERRATO O SCADUTO");
+    alert("CODICE SCONTO ERRATO O SCADUTO");}
     return prezzoBase
 }
 
